@@ -16,6 +16,14 @@ registerApplication(
   (location) => location.pathname.startsWith('/add-event')
 );
 
+registerApplication(
+  '@onwelo/home-page',
+  //@ts-ignore
+  () => System.import('@onwelo/home-page'),
+  // The function below is the "activity function", which must be provided
+  (location) => location.pathname.startsWith('/home')
+);
+
 start({
   urlRerouteOnly: true,
 });
