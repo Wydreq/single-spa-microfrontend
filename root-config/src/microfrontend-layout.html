@@ -1,12 +1,12 @@
-<single-spa-router>
-  <!--
+<single-spa-router mode="history">
+    <!--
 
     This is the single-spa Layout Definition for your microfrontends.
     See https://single-spa.js.org/docs/layout-definition/ for more information.
 
   -->
 
-  <!-- Example layouts you might find helpful:
+    <!-- Example layouts you might find helpful:
 
   <nav>
     <application name="@org/navbar"></application>
@@ -16,10 +16,14 @@
   </route>
 
   -->
-
-  <main>
-    <route default>
-      <application name="@single-spa/welcome"></application>
-    </route>
-  </main>
+    <application name="@onwelo/home-page"></application>
+    <!-- <application name="@onwelo/home-page"></application> -->
+    <main>
+        <route path="home">
+            <application name="@onwelo/home-page"></application>
+        </route>
+        <route path="add-event">
+            <application name="add-event"></application>
+        </route>
+    </main>
 </single-spa-router>
