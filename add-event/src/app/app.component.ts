@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { timer } from 'rxjs';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,5 +16,8 @@ export class AppComponent {
       },
       false
     );
+    timer(0, 1000).subscribe(() => {
+      this.title = this.title + 'aa';
+    });
   }
 }

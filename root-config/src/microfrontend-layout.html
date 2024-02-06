@@ -16,9 +16,14 @@
   </route>
 
   -->
-
+<hr/>
+    <nav>COŚ</nav>
     <application name="add-event"></application>
-    <application name="@onwelo/home-page"></application>
+    <h2>POWYŻEJ ZAWSZE MUSI BYĆ</h2>
+    <hr />
+
+    <a href="/countdown-screen" onclick="singleSpaNavigate(event)"
+  >ZMIANA NA COUNTDOWN</a
     <!-- <application name="@onwelo/home-page"></application> -->
     <main>
         <route path="home">
@@ -26,6 +31,12 @@
         </route>
         <route path="add-event">
             <application name="add-event"></application>
+        </route>
+        <route path="countdown-screen">
+            <application name="countdown-screen"></application>
+        </route>
+        <route path="events-list">
+            <application name="@onwelo/events-list"></application>
         </route>
     </main>
 </single-spa-router>
