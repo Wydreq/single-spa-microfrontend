@@ -9,13 +9,9 @@ import { landscapesBck, petsBck, abstractBck } from './constants/backgrounds';
 export class AddEventComponent {
   @ViewChild(FormComponent) formComponent!: FormComponent;
 
-  protected landscapesBck = this.appendCategory(landscapesBck, 'landscapes');
-  protected petsBck = this.appendCategory(petsBck, 'pets');
-  protected abstractBck = this.appendCategory(abstractBck, 'abstract');
-
-  private appendCategory(images: string[], value: string) {
-    return images.map((i) => value.concat(`/${i}`));
-  }
+  protected landscapesBck = landscapesBck;
+  protected petsBck = petsBck;
+  protected abstractBck = abstractBck;
 
   protected addEventHndler() {
     console.log(this.formComponent.form.value);

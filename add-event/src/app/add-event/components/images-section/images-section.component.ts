@@ -1,8 +1,5 @@
 import { Component, Input } from '@angular/core';
 
-const IMAGES_LOCATION = '/assets/';
-const EXTENSION = '.avif';
-
 @Component({
   selector: 'add-event-images-section',
   templateUrl: './images-section.component.html',
@@ -10,12 +7,7 @@ const EXTENSION = '.avif';
 })
 export class ImagesSectionComponent {
   @Input({ required: true }) label!: string;
-  @Input({ required: true, transform: addPath }) images: string[] = [];
+  @Input({ required: true }) images: string[] = [];
 
   protected selectImage() {}
-}
-function addPath(images: string[]) {
-  return images.map((image) => {
-    return IMAGES_LOCATION.concat(image, EXTENSION);
-  });
 }
