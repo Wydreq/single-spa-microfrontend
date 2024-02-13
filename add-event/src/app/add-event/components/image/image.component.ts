@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 
-const IMAGES_LOCATION = '/assets/backgrounds';
+const MAIN_SERVER_URL = 'http://localhost:4300/';
+const IMAGES_LOCATION = 'assets/elf.jpg';
 const EXTENSION = '.avif';
 
 @Component({
@@ -12,5 +13,5 @@ export class ImageComponent {
   @Input({ required: true, transform: addPath }) name!: string;
 }
 function addPath(image: string) {
-  return IMAGES_LOCATION.concat(image, EXTENSION);
+  return MAIN_SERVER_URL.concat(IMAGES_LOCATION, image, EXTENSION);
 }
